@@ -13,27 +13,55 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #4c2f6d, #8a2be2, #007bff);
+            color: #111827;
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
+
+        /* Dark mode styles using CSS variables for a smoother transition */
+        .dark {
+            --tw-bg-opacity: 1;
+            background: linear-gradient(to right, #1f1f1f, #333333, #1f1f1f);
+            --tw-text-opacity: 1;
+            color: rgb(243 244 246 / var(--tw-text-opacity));
+        }
+
+        /* Simple animation for an entry effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-section {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
     </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+<body class="dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
     <!-- Main Container -->
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto my-8">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto my-8 fade-in-section">
 
             <!-- Profile Section -->
             <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-12 text-center sm:text-left mb-10">
-                <img src="https://placehold.co/150x150/5B21B6/FFFFFF?text=SE" alt="Profile Picture" class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-purple-500 shadow-lg">
+                <img src="https://placehold.co/150x150/8A2BE2/FFFFFF?text=SE" alt="Profile Picture" class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-fuchsia-500 shadow-lg">
                 <div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-purple-700 dark:text-purple-400">Sreya E S</h1>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-fuchsia-600 dark:text-fuchsia-400">Sreya E S</h1>
                     <p class="mt-2 text-lg sm:text-xl text-gray-600 dark:text-gray-300">B.Tech Student from Thrissur</p>
                 </div>
             </div>
 
             <!-- About Me Section -->
             <div class="mb-8">
-                <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-purple-700 dark:text-purple-400 border-b-2 border-purple-300 dark:border-purple-600 pb-2">About Me</h2>
+                <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-fuchsia-600 dark:text-fuchsia-400 border-b-2 border-fuchsia-300 dark:border-fuchsia-600 pb-2">About Me</h2>
                 <p class="text-lg text-gray-700 dark:text-gray-200 leading-relaxed">
                     I am Sreya E S, a passionate individual currently pursuing my Bachelor of Technology degree. Hailing from the beautiful city of Thrissur, my journey in engineering is fueled by curiosity and a desire to learn.
                 </p>
@@ -41,9 +69,9 @@
 
             <!-- Education Section -->
             <div class="mb-8">
-                <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-purple-700 dark:text-purple-400 border-b-2 border-purple-300 dark:border-purple-600 pb-2">Education</h2>
-                <div class="bg-purple-50 dark:bg-purple-900 p-4 rounded-lg shadow-inner">
-                    <p class="text-lg font-medium text-purple-800 dark:text-purple-200">B.Tech Degree</p>
+                <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-fuchsia-600 dark:text-fuchsia-400 border-b-2 border-fuchsia-300 dark:border-fuchsia-600 pb-2">Education</h2>
+                <div class="bg-fuchsia-50 dark:bg-fuchsia-900 p-4 rounded-lg shadow-inner">
+                    <p class="text-lg font-medium text-fuchsia-800 dark:text-fuchsia-200">B.Tech Degree</p>
                     <p class="text-sm text-gray-600 dark:text-gray-300">Thrissur, India</p>
                     <p class="mt-2 text-gray-700 dark:text-gray-200">
                         Currently enrolled in a Bachelor of Technology program, where I am gaining a strong foundation in [Your Branch of Engineering, e.g., Computer Science, Mechanical Engineering, etc.].
@@ -53,8 +81,8 @@
 
             <!-- Interests Section -->
             <div>
-                <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-purple-700 dark:text-purple-400 border-b-2 border-purple-300 dark:border-purple-600 pb-2">Interests</h2>
-                <div class="flex items-center gap-4 bg-purple-50 dark:bg-purple-900 p-4 rounded-lg shadow-inner">
+                <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-fuchsia-600 dark:text-fuchsia-400 border-b-2 border-fuchsia-300 dark:border-fuchsia-600 pb-2">Interests</h2>
+                <div class="flex items-center gap-4 bg-fuchsia-50 dark:bg-fuchsia-900 p-4 rounded-lg shadow-inner">
                     <span class="text-3xl">📚</span>
                     <p class="text-lg text-gray-700 dark:text-gray-200">
                         I have a deep love for reading and spend my free time exploring various genres, from classic literature to modern fiction. Reading not only provides an escape but also broadens my perspective and knowledge.
